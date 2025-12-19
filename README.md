@@ -5,7 +5,7 @@ Welcome to the digital garden for veggie enthusiasts! This lightweight website i
 ## Project Goals:
 1. Celebrate the importance of incorporating vegetables into daily life.
 2. Share fun, sassy, and delightful veggie knowledge.
-- Provide a retro 8‑bit, video-game-inspired visual and interactive experience (original pixel art, not affiliated with any game).
+3. Provide a Stardew Valley-inspired visual and interactive experience.
 
 ## Structure:
 - **Home Page (`index.html`)**:
@@ -23,5 +23,9 @@ Welcome to the digital garden for veggie enthusiasts! This lightweight website i
 2. Open `index.html` in a browser.
 
 ## Future Plans:
-- Add more visually engaging interactive features.
+- Add more visually engaging interactive features (pixel sprites, more Bitaminds, and mini-games).
 - Expand the veggie guide and recipes section with rich content.
+
+## Visual & Interactive Notes
+- This site uses an 8-bit inspired theme (fonts and pixel sprites) for an old-school game feel — think Stardew Valley / Pokémon vibes.
+- 'Bitaminds' are a playful, collectible concept that maps vegetables to small 'power-ups' for learning and fun.

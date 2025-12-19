@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Eat Your Veggies! — Funny, Sassy & Nutritious</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
-        <h1>Eat Your Veggies! 🥦</h1>
+        <h1 class="logo">Eat Your Veggies! 🥦</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -50,6 +50,79 @@
             </article>
         </section>
 
+        <section class="bitaminds">
+            <h3>Bitaminds — Veggie Power-ups (8-bit)</h3>
+            <p class="muted small">Click a veggie to collect its Bitamind — track your collection in your browser. Cute, silly, and a little pixelated.</p>
+            <div class="bit-grid">
+                <div class="bit-card" data-id="carrot">
+                    <div class="sprite">
+                        <svg class="pixel-sprite" viewBox="0 0 16 16" width="96" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="6" y="2" width="4" height="8" fill="#ff8c00"/>
+                            <rect x="5" y="1" width="6" height="2" fill="#ff8c00"/>
+                            <rect x="6" y="0" width="1" height="1" fill="#4caf50"/>
+                            <rect x="9" y="0" width="1" height="1" fill="#4caf50"/>
+                        </svg>
+                    </div>
+                    <h4>Carrot — Night Vision</h4>
+                    <p class="small">Bitamind: +Vision — see snack crates in the dark.</p>
+                    <button class="btn collect-btn">Collect</button>
+                    <p class="collected small muted">Collected: <span class="count">0</span></p>
+                </div>
+
+                <div class="bit-card" data-id="broccoli">
+                    <div class="sprite">
+                        <svg class="pixel-sprite" viewBox="0 0 16 16" width="96" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="4" y="4" width="8" height="6" fill="#2e7d32"/>
+                            <rect x="6" y="10" width="4" height="3" fill="#8d6e63"/>
+                        </svg>
+                    </div>
+                    <h4>Broccoli — Tiny Bodyguards</h4>
+                    <p class="small">Bitamind: +Defense — tiny green shields block sadness.</p>
+                    <button class="btn collect-btn">Collect</button>
+                    <p class="collected small muted">Collected: <span class="count">0</span></p>
+                </div>
+
+                <div class="bit-card" data-id="spinach">
+                    <div class="sprite">
+                        <svg class="pixel-sprite" viewBox="0 0 16 16" width="96" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="3" y="6" width="10" height="4" fill="#2e7d32"/>
+                            <rect x="6" y="3" width="4" height="3" fill="#66bb6a"/>
+                        </svg>
+                    </div>
+                    <h4>Spinach — Strength Up</h4>
+                    <p class="small">Bitamind: +Might — carry more groceries, and emotions.</p>
+                    <button class="btn collect-btn">Collect</button>
+                    <p class="collected small muted">Collected: <span class="count">0</span></p>
+                </div>
+
+                <div class="bit-card" data-id="tomato">
+                    <div class="sprite">
+                        <svg class="pixel-sprite" viewBox="0 0 16 16" width="96" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="4" y="5" width="8" height="6" fill="#e53935"/>
+                            <rect x="6" y="3" width="4" height="2" fill="#a5d6a7"/>
+                        </svg>
+                    </div>
+                    <h4>Tomato — Heart Buddy</h4>
+                    <p class="small">Bitamind: +Affection — your heart whispers "thanks".</p>
+                    <button class="btn collect-btn">Collect</button>
+                    <p class="collected small muted">Collected: <span class="count">0</span></p>
+                </div>
+
+                <div class="bit-card" data-id="sweetpotato">
+                    <div class="sprite">
+                        <svg class="pixel-sprite" viewBox="0 0 16 16" width="96" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect x="3" y="6" width="10" height="4" fill="#ffb74d"/>
+                            <rect x="5" y="4" width="6" height="2" fill="#ff8a65"/>
+                        </svg>
+                    </div>
+                    <h4>Sweet Potato — Energy Boost</h4>
+                    <p class="small">Bitamind: +Stamina — better walks, better dance moves.</p>
+                    <button class="btn collect-btn">Collect</button>
+                    <p class="collected small muted">Collected: <span class="count">0</span></p>
+                </div>
+            </div>
+        </section>
+
         <section class="signup">
             <h3>Want daily sass & facts?</h3>
             <form id="signup-form" aria-label="Signup for veggie facts">
@@ -57,59 +130,6 @@
                 <button class="btn" type="submit">Subscribe</button>
             </form>
             <p id="signup-msg" class="small muted"></p>
-        </section>
-
-        <section class="bitaminds">
-            <h3>Bitaminds — eat a veggie, get a boost 🎮</h3>
-            <p class="muted small">Collect these power-ups like classic RPG stat boosts — cute, pixelated, and scientifically inspired.</p>
-            <div class="bits-grid">
-                <div class="bit-card" tabindex="0" role="button" data-name="Carrot" data-bits="+2 Vision, +1 Agility">
-                    <svg class="sprite" width="64" height="64" viewBox="0 0 8 8" aria-hidden="true">
-                        <!-- pixel carrot: simple orange triangle -->
-                        <rect x="3" y="0" width="2" height="1" fill="#7BC043" />
-                        <rect x="2" y="1" width="4" height="1" fill="#FF9500" />
-                        <rect x="2" y="2" width="4" height="1" fill="#FF9500" />
-                        <rect x="1" y="3" width="6" height="2" fill="#FF6F00" />
-                        <rect x="2" y="5" width="4" height="2" fill="#8B3E00" />
-                    </svg>
-                    <h4>Carrot</h4>
-                    <p class="tiny muted">Bitamind: <strong>+2 Vision</strong>, <strong>+1 Agility</strong></p>
-                </div>
-
-                <div class="bit-card" tabindex="0" role="button" data-name="Broccoli" data-bits="+1 Defense, +1 Immunity">
-                    <svg class="sprite" width="64" height="64" viewBox="0 0 8 8" aria-hidden="true">
-                        <!-- broccoli crown -->
-                        <rect x="1" y="0" width="6" height="2" fill="#4CAF50" />
-                        <rect x="1" y="2" width="6" height="1" fill="#388E3C" />
-                        <rect x="3" y="3" width="2" height="3" fill="#8D6E63" />
-                        <rect x="2" y="6" width="4" height="1" fill="#2E7D32" />
-                    </svg>
-                    <h4>Broccoli</h4>
-                    <p class="tiny muted">Bitamind: <strong>+1 Defense</strong>, <strong>+1 Immunity</strong></p>
-                </div>
-
-                <div class="bit-card" tabindex="0" role="button" data-name="Spinach" data-bits="+2 Strength, +1 Focus">
-                    <svg class="sprite" width="64" height="64" viewBox="0 0 8 8" aria-hidden="true">
-                        <!-- spinach leaf -->
-                        <rect x="1" y="1" width="6" height="2" fill="#66BB6A" />
-                        <rect x="1" y="3" width="4" height="2" fill="#4CAF50" />
-                        <rect x="3" y="5" width="3" height="1" fill="#2E7D32" />
-                    </svg>
-                    <h4>Spinach</h4>
-                    <p class="tiny muted">Bitamind: <strong>+2 Strength</strong>, <strong>+1 Focus</strong></p>
-                </div>
-
-                <div class="bit-card" tabindex="0" role="button" data-name="Sweet Potato" data-bits="+2 Energy">
-                    <svg class="sprite" width="64" height="64" viewBox="0 0 8 8" aria-hidden="true">
-                        <!-- sweet potato -->
-                        <rect x="1" y="2" width="6" height="3" fill="#FFB74D" />
-                        <rect x="1" y="5" width="6" height="1" fill="#D84315" />
-                    </svg>
-                    <h4>Sweet Potato</h4>
-                    <p class="tiny muted">Bitamind: <strong>+2 Energy</strong></p>
-                </div>
-            </div>
-            <p class="tiny muted">Tip: Click or press Enter on any card to get a cute description in the fact box above.</p>
         </section>
     </main>
 
