@@ -5,18 +5,18 @@ Welcome to the digital garden for veggie enthusiasts! This lightweight website i
 ## Project Goals:
 1. Celebrate the importance of incorporating vegetables into daily life.
 2. Share fun, sassy, and delightful veggie knowledge.
-3. Provide a Stardew Valley-inspired visual and interactive experience.
+- Provide a retro 8‑bit, video-game-inspired visual and interactive experience (original pixel art, not affiliated with any game).
 
 ## Structure:
 - **Home Page (`index.html`)**:
     - Describes the joys and benefits of veggies in a creative way.
     - Serves as a navigation hub.
 - **`why-veggies.html`**:
-    - Placeholder for reasons to love veggies.
+    - A sassy, informative page covering health benefits, nutrition notes, and myth-busting about vegetables.
 - **`veggie-guide.html`**:
-    - Placeholder for a colorful guide to vegetables.
+    - Practical picks, prep tips, and swaps to make veggies easy and fun.
 - **`recipes.html`**:
-    - Placeholder for delicious veggie recipes.
+    - Three quick, tasty recipes to help you add more vegetables to your meals.
 
 ## Setup Instructions:
 1. Clone this repository.

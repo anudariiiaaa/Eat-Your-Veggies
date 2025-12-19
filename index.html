@@ -1,28 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Eat Your Veggies!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Eat Your Veggies! — Funny, Sassy & Nutritious</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Eat Your Veggies!</h1>
-    </header>
-    <main>
-        <p>
-            Eating vegetables has never been this charming! Let us take you on a journey of cute, sassy, and delightful veggie wisdom!
-        </p>
+    <header class="site-header">
+        <h1>Eat Your Veggies! 🥦</h1>
         <nav>
             <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="why-veggies.html">Why Veggies?</a></li>
                 <li><a href="veggie-guide.html">Veggie Guide</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
             </ul>
         </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Get Sassier About Your Salad — and Smarter About Your Health</h2>
+            <p class="lead">Short, punchy veggie truths, science-backed benefits, and recipes that won't judge your life choices. (But your grandma might.)</p>
+            <div class="cta-row">
+                <button id="fact-btn" class="btn">Give me a sassy veggie fact 🥕</button>
+                <button id="sass-meter" class="btn btn-alt">Check my Sass Meter 💅</button>
+            </div>
+            <p id="fact-output" class="fact-output" aria-live="polite"></p>
+        </section>
+
+        <section class="features">
+            <article>
+                <h3>Why it matters</h3>
+                <p>Veggies are full of fiber, vitamins, and minerals that keep your body doing its job — quietly and without applause. Eat them regularly and your heart, gut, and brain will send you thank-you notes in the form of better sleep and energy.</p>
+            </article>
+            <article>
+                <h3>Quick swaps</h3>
+                <ul>
+                    <li>Fries → Baked sweet potato wedges</li>
+                    <li>Chips → Crunchy roasted chickpeas</li>
+                    <li>Milkshake → Green smoothie (still delicious, promise)</li>
+                </ul>
+            </article>
+            <article>
+                <h3>Ready-made recipes</h3>
+                <p>Check out three easy recipes on the <a href="recipes.html">Recipes</a> page — tasty, fast, and judgment-free.</p>
+            </article>
+        </section>
+
+        <section class="signup">
+            <h3>Want daily sass & facts?</h3>
+            <form id="signup-form" aria-label="Signup for veggie facts">
+                <input type="email" id="email" placeholder="your@email.com" aria-label="Email address">
+                <button class="btn" type="submit">Subscribe</button>
+            </form>
+            <p id="signup-msg" class="small muted"></p>
+        </section>
+
+        <section class="bitaminds">
+            <h3>Bitaminds — eat a veggie, get a boost 🎮</h3>
+            <p class="muted small">Collect these power-ups like classic RPG stat boosts — cute, pixelated, and scientifically inspired.</p>
+            <div class="bits-grid">
+                <div class="bit-card" tabindex="0" role="button" data-name="Carrot" data-bits="+2 Vision, +1 Agility">
+                    <svg class="sprite" width="64" height="64" viewBox="0 0 8 8" aria-hidden="true">
+                        <!-- pixel carrot: simple orange triangle -->
+                        <rect x="3" y="0" width="2" height="1" fill="#7BC043" />
+                        <rect x="2" y="1" width="4" height="1" fill="#FF9500" />
+                        <rect x="2" y="2" width="4" height="1" fill="#FF9500" />
+                        <rect x="1" y="3" width="6" height="2" fill="#FF6F00" />
+                        <rect x="2" y="5" width="4" height="2" fill="#8B3E00" />
+                    </svg>
+                    <h4>Carrot</h4>
+                    <p class="tiny muted">Bitamind: <strong>+2 Vision</strong>, <strong>+1 Agility</strong></p>
+                </div>
+
+                <div class="bit-card" tabindex="0" role="button" data-name="Broccoli" data-bits="+1 Defense, +1 Immunity">
+                    <svg class="sprite" width="64" height="64" viewBox="0 0 8 8" aria-hidden="true">
+                        <!-- broccoli crown -->
+                        <rect x="1" y="0" width="6" height="2" fill="#4CAF50" />
+                        <rect x="1" y="2" width="6" height="1" fill="#388E3C" />
+                        <rect x="3" y="3" width="2" height="3" fill="#8D6E63" />
+                        <rect x="2" y="6" width="4" height="1" fill="#2E7D32" />
+                    </svg>
+                    <h4>Broccoli</h4>
+                    <p class="tiny muted">Bitamind: <strong>+1 Defense</strong>, <strong>+1 Immunity</strong></p>
+                </div>
+
+                <div class="bit-card" tabindex="0" role="button" data-name="Spinach" data-bits="+2 Strength, +1 Focus">
+                    <svg class="sprite" width="64" height="64" viewBox="0 0 8 8" aria-hidden="true">
+                        <!-- spinach leaf -->
+                        <rect x="1" y="1" width="6" height="2" fill="#66BB6A" />
+                        <rect x="1" y="3" width="4" height="2" fill="#4CAF50" />
+                        <rect x="3" y="5" width="3" height="1" fill="#2E7D32" />
+                    </svg>
+                    <h4>Spinach</h4>
+                    <p class="tiny muted">Bitamind: <strong>+2 Strength</strong>, <strong>+1 Focus</strong></p>
+                </div>
+
+                <div class="bit-card" tabindex="0" role="button" data-name="Sweet Potato" data-bits="+2 Energy">
+                    <svg class="sprite" width="64" height="64" viewBox="0 0 8 8" aria-hidden="true">
+                        <!-- sweet potato -->
+                        <rect x="1" y="2" width="6" height="3" fill="#FFB74D" />
+                        <rect x="1" y="5" width="6" height="1" fill="#D84315" />
+                    </svg>
+                    <h4>Sweet Potato</h4>
+                    <p class="tiny muted">Bitamind: <strong>+2 Energy</strong></p>
+                </div>
+            </div>
+            <p class="tiny muted">Tip: Click or press Enter on any card to get a cute description in the fact box above.</p>
+        </section>
     </main>
+
     <footer>
-        <p>Stay Healthy, Stay Happy!</p>
+        <p>© Eat Your Veggies — Sass, stats, and seasonal produce. Built with love and a toaster oven.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
