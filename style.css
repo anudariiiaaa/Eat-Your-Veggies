@@ -41,15 +41,35 @@ input[type=email]{padding:10px;border-radius:6px;border:1px solid #ddd;margin-ri
 #signup-form{display:flex;gap:8px;justify-content:center;align-items:center;margin-top:12px}
 .small.muted{font-size:0.85rem;color:var(--muted)}
 
-/* Bitaminds / pixel art */
+/* Bitaminds / pixel art (larger, cuter sprites) */
+:root{--sprite-size:140px}
 .bitaminds{padding:18px}
+.bit-settings{background:linear-gradient(#fff,#fcfff8);border:1px dashed rgba(0,0,0,0.04);padding:10px;border-radius:8px;margin:8px 0}
+.bit-settings .controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.bit-settings .control{display:inline-flex;gap:8px;align-items:center}
 .bit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
-.bit-card{background:linear-gradient(#fff,#fcfff8);padding:12px;border-radius:6px;border:2px solid rgba(0,0,0,0.06);text-align:center}
-.pixel-sprite{image-rendering:pixelated;shape-rendering:crispEdges;width:96px;height:96px;margin:0 auto;display:block}
-.sprite{margin-bottom:8px}
-.bit-card h4{font-family:'Press Start 2P',monospace;font-size:12px;margin:6px 0}
+.bit-card{background:linear-gradient(#fff,#fcfff8);padding:14px;border-radius:8px;border:2px solid rgba(0,0,0,0.06);text-align:center}
+.pixel-sprite{image-rendering:pixelated;shape-rendering:crispEdges;width:var(--sprite-size);height:var(--sprite-size);margin:0 auto;display:block;border:3px solid rgba(0,0,0,0.06);background:linear-gradient(#fbfffa,#f3fff0)}
+.sprite{margin-bottom:10px;transition:transform 220ms cubic-bezier(.2,.9,.1,1)}
+.sprite:hover{transform:translateY(-6px) scale(1.03)}
+.bit-card h4{font-family:'Fredoka One', 'Press Start 2P', monospace;font-size:13px;margin:6px 0}
 .collected{margin-top:8px}
 .collect-btn{margin-top:6px}
+
+/* smooth bob (default) */
+@keyframes bob {0% { transform: translateY(0)} 50% { transform: translateY(-6px) } 100% { transform: translateY(0) }}
+.pixel-sprite.animate-smooth { animation: bob 1600ms ease-in-out infinite }
+
+/* 2-frame pixel-style bob (discrete steps) */
+@keyframes step-bob { 0% { transform: translateY(0) } 50% { transform: translateY(-8px) } 100% { transform: translateY(0) }}
+.pixel-sprite.animate-steps { animation: step-bob 800ms steps(2) infinite }
+
+/* off: no animation (default) */
+.pixel-sprite.animate-off { animation: none }
+
+/* subtle float animation for friendliness */
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-4px)}100%{transform:translateY(0)}}
+.bit-card{animation:floaty 6s ease-in-out infinite}
 
 /* Tiny toast */
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:24px;background:#263238;color:white;padding:10px 14px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,0.3);display:none}

@@ -103,5 +103,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
   updateCounts();
 
+  // Sprite settings (animation mode + size) persisted in localStorage
+  const animSelect = document.getElementById('anim-mode');
+  const sizeSelect = document.getElementById('sprite-size');
+
+  function loadSettings(){
+    try{ return JSON.parse(localStorage.getItem('bitamindsSettings')) || {} }catch(e){return {}};
+  }
+  function saveSettings(obj){ localStorage.setItem('bitamindsSettings', JSON.stringify(obj)); }
+
+  function applySettings(){
+    const s = loadSettings();
+    const mode = s.animMode || 'smooth';
+    const size = s.size || '140';
+
+    // apply animation classes
+    document.querySelectorAll('.pixel-sprite').forEach(el => {
+      el.classList.remove('animate-smooth','animate-steps','animate-off');
+      if(mode === 'smooth') el.classList.add('animate-smooth');
+      else if(mode === 'pixel') el.classList.add('animate-steps');
+      else el.classList.add('animate-off');
+    });
+
+    // apply size
+    document.documentElement.style.setProperty('--sprite-size', size + 'px');
+
+    // update selects UI
+    if(animSelect) animSelect.value = mode;
+    if(sizeSelect) sizeSelect.value = size;
+  }
+
+  if(animSelect){
+    animSelect.addEventListener('change', ()=>{
+      const settings = loadSettings(); settings.animMode = animSelect.value; saveSettings(settings); applySettings();
+    });
+  }
+  if(sizeSelect){
+    sizeSelect.addEventListener('change', ()=>{
+      const settings = loadSettings(); settings.size = sizeSelect.value; saveSettings(settings); applySettings();
+    });
+  }
+
+  // initialize with stored or default settings
+  if(!localStorage.getItem('bitamindsSettings')){
+    saveSettings({ animMode: 'smooth', size: '140' });
+  }
+  applySettings();
+
   console.log('Interactive features loaded. Bitaminds active.');
 });

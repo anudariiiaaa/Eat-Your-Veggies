@@ -28,4 +28,6 @@ Welcome to the digital garden for veggie enthusiasts! This lightweight website i
 
 ## Visual & Interactive Notes
 - This site uses an 8-bit inspired theme (fonts and pixel sprites) for an old-school game feel — think Stardew Valley / Pokémon vibes.
+- Sprites were recently updated to be larger and cuter (still pixel-inspired but scaled for clarity and charm).
+- Bitaminds now have **sprite settings**: animation mode (smooth / pixel 2-frame / off) and sprite size (small / medium / large). Settings are saved to your browser.
 - 'Bitaminds' are a playful, collectible concept that maps vegetables to small 'power-ups' for learning and fun.
